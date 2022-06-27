@@ -21,27 +21,29 @@ const NewBeer = () => {
       method: "POST",
       url: "https://ih-beers-api2.herokuapp.com/beers/new",
       data: {
-        title: name,
+        name: name,
         tagline: tagline,
         description: description,
-        firstBrewed: firstBrewed,
-        brewerTips: brewerTips,
-        attenuationLevel: attenuationLevel,
-        contributedBy: contributedBy,
+        first_brewed: firstBrewed,
+        brewer_tips: brewerTips,
+        attenuation_level: attenuationLevel,
+        contributed_bsy: contributedBy,
       },
-    }).then((response) => {
-      console.log("response.data", response.data)
-
-      setName("")
-      setTagline("")
-      setDescription("")
-      setFirstBrewed("")
-      setBrewerTips("")
-      setAttenuationLevel("")
-      setContributedBy("")
-
-      navigate("/")
     })
+      .then((response) => {
+        console.log("response.data", response.data)
+
+        setName("")
+        setTagline("")
+        setDescription("")
+        setFirstBrewed("")
+        setBrewerTips("")
+        setAttenuationLevel("")
+        setContributedBy("")
+
+        navigate("/")
+      })
+      .catch((err) => console.error(err))
   }
 
   return (

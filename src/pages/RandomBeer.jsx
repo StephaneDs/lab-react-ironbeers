@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react"
 import Header from "../components/Header"
 import axios from "axios"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const RandomBeer = () => {
   const [beer, setBeer] = useState(null)

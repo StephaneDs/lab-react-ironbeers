@@ -16,7 +16,6 @@ function App() {
           <Route path="/beers" element={<ListBeers />} />
           <Route path="/new" element={<NewBeer />} />
           <Route path="/random" element={<RandomBeer />} />
-          <Route path="/single" element={<SingleBeer />} />
           <Route path="/single/:id" element={<SingleBeer />} />
           {/* <Route path="/user">
 
